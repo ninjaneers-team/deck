@@ -37,8 +37,8 @@ jobs:
         - helm init --client-only
         - VERSION=$(git describe --tags --abbrev=0 | cut -c 2-)
       script:
-        - helm lint $NAME
-        - helm package $NAME --version=$VERSION
+        - helm lint .
+        - helm package . --version=$VERSION
         - ./.ci/update_chart.sh
 cache:
   directories:
