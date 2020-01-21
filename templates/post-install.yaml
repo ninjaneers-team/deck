@@ -1,0 +1,41 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "deck.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "deck.name" . }}
+    helm.sh/chart: {{ include "deck.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Name }}
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  template:
+    metadata:
+      name: {{ template "deck.name" . }}
+      labels:
+        app: {{ template "deck.name" . }}
+        release: "{{ .Release.Name }}"
+        component: batch
+    spec:
+      {{- if .Values.imagePullSecrets }}
+      imagePullSecrets:
+      {{- range .Values.imagePullSecrets }}
+      - name: {{ . }}
+      {{- end }}
+      {{- end }}
+      containers:
+        - name: {{ include "deck.name" . }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - name: {{ template "deck.fullname" . }}-config-volume
+              mountPath: /deck
+          command: ["/bin/sh"]
+          args: ["-c", "./deck sync --opa-addr {{ .Values.config.host }} -s /deck"]
+      restartPolicy: OnFailure
+      volumes:
+        - name: {{ template "deck.fullname" . }}-config-volume
+          configMap:
+            name: {{ template "deck.fullname" . }}-config

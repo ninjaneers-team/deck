@@ -1,0 +1,76 @@
+# Default values for deck.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: hbagdi/deck
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+config:
+  host: http://localhost:8001
+  data:
+    opa.yaml: |
+      _format_version: "1.1"
+      services:
+        - connect_timeout: 60000
+          host: example.com
+          name: foo
+          port: 80
+          protocol: http
+          read_timeout: 60000
+          retries: 5
+          write_timeout: 60000
+          routes:
+          - name: bar
+            paths:
+            - /bar
+            preserve_host: false
+            protocols:
+            - http
+            - https
+            regex_priority: 0
+            strip_path: true
+            https_redirect_status_code: 426
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+
+podSecurityContext: {}
+# fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+# runAsNonRoot: true
+# runAsUser: 1000
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+#   cpu: 100m
+#   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "deck.fullname" . }}-config
+  labels:
+    heritage: {{ .Release.Name }}
+    release: {{ .Release.Name }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    app: {{ template "deck.name" . }}
+data:
+  {{- if .Values.config.data }}
+    {{- range $key, $value := .Values.config.data }}
+    {{ $key }}: |
+    {{ $value | indent 4 }}
+    {{- end -}}
+    {{- end -}}
