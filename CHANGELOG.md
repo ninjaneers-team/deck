@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ninjaneers-team/deck/compare/v1.0.0...v1.0.1) (2020-01-21)
+
+
+### Bug Fixes
+
+* **pipeline:** fix package step ([f4088db](https://github.com/ninjaneers-team/deck/commit/f4088db6b5f4106654e22094337bb6586ad04ee1))
+
 # 1.0.0 (2020-01-21)
 
 
