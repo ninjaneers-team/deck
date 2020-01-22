@@ -13,31 +13,30 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-config:
-  host: http://localhost:8001
-  data:
-    opa.yaml: |
-      _format_version: "1.1"
-      services:
-        - connect_timeout: 60000
-          host: example.com
-          name: foo
-          port: 80
-          protocol: http
-          read_timeout: 60000
-          retries: 5
-          write_timeout: 60000
-          routes:
-          - name: bar
-            paths:
-            - /bar
-            preserve_host: false
-            protocols:
-            - http
-            - https
-            regex_priority: 0
-            strip_path: true
-            https_redirect_status_code: 426
+host: http://localhost:8001
+data:
+  opa.yaml: |
+    _format_version: "1.1"
+    services:
+      - connect_timeout: 60000
+        host: example.com
+        name: foo
+        port: 80
+        protocol: http
+        read_timeout: 60000
+        retries: 5
+        write_timeout: 60000
+        routes:
+        - name: bar
+          paths:
+          - /bar
+          preserve_host: false
+          protocols:
+          - http
+          - https
+          regex_priority: 0
+          strip_path: true
+          https_redirect_status_code: 426
 
 serviceAccount:
   # Specifies whether a service account should be created

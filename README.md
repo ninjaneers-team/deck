@@ -19,8 +19,8 @@ The chart can be customized using the following configurable parameters:
 | `image.tag`                     | Container image tag                                   | `latest`                    |
 | `image.pullPolicy`              | Container pull policy                                 | `Always`                     |
 | `imagepullSecret`              | Pod pull secret                                       | ``                     |
-| `config.opaHost`                  | Opa host url                                         | `http://localhost:8181`                  |
-| `config.data`           | Opa.yaml configuration file        | `{}`                         |
+| `host`                  | Opa host url                                         | `http://localhost:8181`                  |
+| `data`           | Opa.yaml configuration file        | `{}`                         |
 
 Specify parameters using `--set key=value[,key=value]` argument to `helm install`
 
