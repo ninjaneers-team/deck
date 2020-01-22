@@ -1,5 +1,7 @@
 # deck Helm Chart
 
+[![Build Status](https://travis-ci.org/ninjaneers-team/deck.svg?branch=master)](https://travis-ci.org/ninjaneers-team/deck)
+
 This is an implementation of deck batch job for kubernetes to migrate Open Policy Agent policies
 
 ## Pre Requisites
