@@ -33,7 +33,7 @@ spec:
             - name: {{ template "deck.fullname" . }}-config-volume
               mountPath: /deck
           command: ["/bin/sh"]
-          args: ["-c", "./deck sync --opa-addr {{ .Values.host }} -s /deck"]
+          args: ["-c", "deck sync --opa-addr {{ .Values.host }} -s /deck"]
       restartPolicy: OnFailure
       volumes:
         - name: {{ template "deck.fullname" . }}-config-volume
