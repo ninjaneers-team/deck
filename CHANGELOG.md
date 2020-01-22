@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/ninjaneers-team/deck/compare/v2.0.0...v2.0.1) (2020-01-22)
+
+
+### Bug Fixes
+
+* **chart:** fix configmap ([327a48f](https://github.com/ninjaneers-team/deck/commit/327a48fead6c90e8e27d16583c3cd068ef34efee))
+
 # [2.0.0](https://github.com/ninjaneers-team/deck/compare/v1.0.1...v2.0.0) (2020-01-22)
 
 
