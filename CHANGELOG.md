@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/ninjaneers-team/deck/compare/v2.0.4...v2.0.5) (2020-01-22)
+
+
+### Bug Fixes
+
+* **container:** fix container command ([d6c629a](https://github.com/ninjaneers-team/deck/commit/d6c629a41b887bfd12af61f0bc9ebbe54450dbd0))
+
 ## [2.0.4](https://github.com/ninjaneers-team/deck/compare/v2.0.3...v2.0.4) (2020-01-22)
 
 
