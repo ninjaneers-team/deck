@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/ninjaneers-team/deck/compare/v2.0.1...v2.0.2) (2020-01-22)
+
+
+### Bug Fixes
+
+* **configmap:** rename ([a25e2a2](https://github.com/ninjaneers-team/deck/commit/a25e2a2fdf6931768f9daaa18d27fb2b5724c46b))
+
 ## [2.0.1](https://github.com/ninjaneers-team/deck/compare/v2.0.0...v2.0.1) (2020-01-22)
 
 
