@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/ninjaneers-team/deck/compare/v1.0.1...v2.0.0) (2020-01-22)
+
+
+### Features
+
+* **chart:** Change interface ([406d071](https://github.com/ninjaneers-team/deck/commit/406d071ce24ec447dcacbc60a673ece17ff3f240))
+
+
+### BREAKING CHANGES
+
+* **chart:** interface changed. See README.md
+
 ## [1.0.1](https://github.com/ninjaneers-team/deck/compare/v1.0.0...v1.0.1) (2020-01-21)
 
 
