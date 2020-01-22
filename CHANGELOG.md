@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/ninjaneers-team/deck/compare/v2.0.5...v2.0.6) (2020-01-22)
+
+
+### Bug Fixes
+
+* **post-install:** change --opa-addr to --kong-addr ([24579d1](https://github.com/ninjaneers-team/deck/commit/24579d1042f37b32f8f95769358d5bf9dd54ff90))
+
 ## [2.0.5](https://github.com/ninjaneers-team/deck/compare/v2.0.4...v2.0.5) (2020-01-22)
 
 
