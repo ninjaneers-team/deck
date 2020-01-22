@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/ninjaneers-team/deck/compare/v2.0.3...v2.0.4) (2020-01-22)
+
+
+### Bug Fixes
+
+* **values:** comment out example yaml ([be9058e](https://github.com/ninjaneers-team/deck/commit/be9058e7403b34ac3b749e27ffc119b4e67a0f4e))
+
 ## [2.0.3](https://github.com/ninjaneers-team/deck/compare/v2.0.2...v2.0.3) (2020-01-22)
 
 
