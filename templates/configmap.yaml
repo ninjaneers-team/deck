@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "deck.fullname" . }}-config
+  name: {{ template "deck.fullname" . }}-deck-config
   labels:
     heritage: {{ .Release.Name }}
     release: {{ .Release.Name }}

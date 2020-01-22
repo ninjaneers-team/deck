@@ -38,4 +38,4 @@ spec:
       volumes:
         - name: {{ template "deck.fullname" . }}-config-volume
           configMap:
-            name: {{ template "deck.fullname" . }}-config
+            name: {{ template "deck.fullname" . }}-deck-config
