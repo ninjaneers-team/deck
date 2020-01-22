@@ -8,8 +8,8 @@ metadata:
     chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     app: {{ template "deck.name" . }}
 data:
-  {{- if .Values.config.data }}
-    {{- range $key, $value := .Values.config.data }}
+  {{- if .Values.data }}
+    {{- range $key, $value := .Values.data }}
     {{ $key }}: |
     {{ $value | indent 4 }}
     {{- end -}}
