@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/ninjaneers-team/deck/compare/v2.0.2...v2.0.3) (2020-01-22)
+
+
+### Bug Fixes
+
+* **configmap:** fix formatting ([212449c](https://github.com/ninjaneers-team/deck/commit/212449cdd0cc9e516851ef5d87f092a794e8c6e8))
+
 ## [2.0.2](https://github.com/ninjaneers-team/deck/compare/v2.0.1...v2.0.2) (2020-01-22)
 
 
